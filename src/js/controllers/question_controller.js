@@ -2,6 +2,8 @@ import { Controller } from "@hotwired/stimulus";
 import { themeChange } from 'theme-change'
 import { HfInference } from "@huggingface/inference";
 
+themeChange()
+
 const hf = new HfInference('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')
 
 window.hf = hf
@@ -22,7 +24,6 @@ export default class extends Controller {
     static targets = ["question", "rating", "originalQuestion"]
 
     connect() {
-        themeChange()
         this.fetch()
     }
 
