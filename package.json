@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
-    "google-translate-api-browser": "^4.2.7",
+    "@huggingface/inference": "^2.6.4",
     "theme-change": "^2.5.0"
   }
 }

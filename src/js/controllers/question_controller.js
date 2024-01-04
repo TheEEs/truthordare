@@ -1,6 +1,10 @@
 import { Controller } from "@hotwired/stimulus";
-import { translate } from "google-translate-api-browser/dist/browser/esm"
 import { themeChange } from 'theme-change'
+import { HfInference } from "@huggingface/inference";
+
+const hf = new HfInference('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')
+
+window.hf = hf
 
 const END_POINTS = [
     "https://api.truthordarebot.xyz/v1/truth",
@@ -23,14 +27,11 @@ export default class extends Controller {
     }
 
 
-    t(sentence) {
-        return translate(sentence, { to: "vi", corsUrl: "http://cors-anywhere.herokuapp.com/" })
-            .then(res => {
-                return res.text
-            })
-            .catch(err => {
-                console.error(err);
-            });
+    async t(sentence) {
+        return (await hf.translation({
+            model: "VietAI/envit5-translation",
+            inputs: `en: ${sentence}`,
+        })).translation_text.slice(3).trim()
     }
 
     async fetch() {
