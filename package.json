@@ -1,0 +1,36 @@
+{
+  "name": "truth_or_dare",
+  "version": "1.0.0",
+  "description": "truth or dare game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tran Dat",
+  "license": "MIT",
+  "devDependencies": {
+    "assert": "^2.1.0",
+    "buffer": "^6.0.3",
+    "constants-browserify": "^1.0.0",
+    "daisyui": "^4.5.0",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.10.3",
+    "path-browserify": "^1.0.1",
+    "postcss": "^8.4.32",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "tailwindcss": "^3.4.0",
+    "url": "^0.11.3",
+    "util": "^0.12.5",
+    "vm-browserify": "^1.1.2"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "google-translate-api-browser": "^4.2.7",
+    "theme-change": "^2.5.0"
+  }
+}
