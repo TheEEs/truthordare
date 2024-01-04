@@ -22,9 +22,6 @@ export default class extends Controller {
     static targets = ["question", "rating", "originalQuestion"]
 
     connect() {
-        document.querySelector("[data-toggle-theme]").addEventListener("click",()=>{
-            alert("OK")
-        })
         themeChange()
         this.fetch()
     }
